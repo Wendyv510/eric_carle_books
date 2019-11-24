@@ -8,7 +8,7 @@ module EricCarleBooks
   # Your code goes here...
 end
 
-class Books 
+class EricCarleBooks::Books 
   
   attr_accessor :title, :year_published, :description 
   
