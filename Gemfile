@@ -5,4 +5,9 @@ gemspec
 
 
 require 'nokogiri'
+require 'pry'
+Pry.start 
+
+require 'irb'
+IRB.start("https://github.com/Wendyv510/eric_carle_books.git")
 

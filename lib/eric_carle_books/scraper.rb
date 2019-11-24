@@ -14,7 +14,7 @@ class EricCarleBooks::Scraper
   def get_books 
     self.get_page.css("span.booktitle")
   end 
-  binding.pry 
+
   def get_info(title) 
     self.get_books.each do |book|
       book = Books.new 
