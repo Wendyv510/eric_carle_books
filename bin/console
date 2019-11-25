@@ -11,4 +11,7 @@ require "eric_carle_books"
 # Pry.start
 
 require "irb"
-IRB.start(__FILE__)
+IRB.start("git@github.com:Wendyv510/eric_carle_books.git")
+
+
+EricCarleBooks::Books.greeting 
