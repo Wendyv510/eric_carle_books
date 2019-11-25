@@ -33,7 +33,7 @@ class EricCarleBooks::Books
       end 
   end 
   
-  def greeting_2 
+  def info_prompt  
     puts "Would you like more info on a book? Y/N"
     
    input = gets.chomp 

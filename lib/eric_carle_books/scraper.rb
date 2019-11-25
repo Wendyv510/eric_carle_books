@@ -13,12 +13,11 @@ class EricCarleBooks::Scraper
   
   def get_books 
     self.get_page.css("span.booktitle")
+    book = Books.new 
   end 
 
   def get_info(title) 
-    self.get_books.each do |book|
-      book = Books.new 
-      book.title =  doc.css("span.booktitle")
+    self.get_books.select {|book| book.title}
       book.year_published = doc.css("span").text[0] 
       book.description = doc.css ("span").text [1] 
     end 
