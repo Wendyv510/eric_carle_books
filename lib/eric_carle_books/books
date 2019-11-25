@@ -1,12 +1,5 @@
-require "eric_carle_books/version"
-require 'pry'
-require './scraper.rb'
-
-
-module EricCarleBooks
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative './scraper.rb'
+require_relative './bin/run'
 
 class EricCarleBooks::Books 
   
