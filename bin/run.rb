@@ -6,4 +6,8 @@ require_relative './books.rb'
 require_relative './scraper.rb'
 require_relative './Gemfile' 
 
-Books.new.greeting 
+require 'irb'
+require 'pry' 
+
+EricCarleBooks::Books.greeting 
+
