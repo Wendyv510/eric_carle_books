@@ -1,9 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
-
-require_relative './eric_carle_books.rb' 
-require_relative './bin/run.rb'
 
 class EricCarleBooks::Scraper 
   
@@ -18,9 +12,8 @@ class EricCarleBooks::Scraper
 
   def get_info(title) 
     self.get_books.select {|book| book.title}
-      book.year_published = doc.css("span").text[0] 
-      book.description = doc.css ("span").text [1] 
-    end 
+     # book.year_published = doc.css("span").text[0] 
+      #book.description = doc.css ("span").text [1] 
   end 
       
   
