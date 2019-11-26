@@ -1,4 +1,3 @@
-
 class EricCarleBooks::Scraper 
   
   def get_page 

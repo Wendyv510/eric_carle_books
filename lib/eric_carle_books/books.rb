@@ -1,6 +1,3 @@
-require_relative './scraper.rb'
-require_relative './bin/run'
-
 class EricCarleBooks::Books 
   
   attr_accessor :title, :year_published, :description 

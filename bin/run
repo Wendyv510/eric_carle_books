@@ -2,6 +2,6 @@
 
 require_relative "../lib/eric_carle_books.rb" 
 
-
+puts "Hello World!"
 
 EricCarleBooks::Books.new.greeting
