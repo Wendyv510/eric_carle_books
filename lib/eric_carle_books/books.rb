@@ -4,7 +4,8 @@ class EricCarleBooks::Books
   
   @@all = [] 
   
-  def initialize 
+  def initialize(title)
+    @title = title 
     @@all << self 
   end 
   
