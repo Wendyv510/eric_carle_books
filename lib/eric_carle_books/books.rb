@@ -18,7 +18,7 @@ class EricCarleBooks::Books
   input = "" 
   input = gets.chomp 
       if input == "Y"
-        EricCarleBooks::Scraper.get_books 
+        puts EricCarleBooks::Scraper.get_books 
       else 
         puts "Sorry, we can't help you."
       end 
@@ -26,12 +26,12 @@ class EricCarleBooks::Books
   
   def info_prompt  
     puts "Would you like more info on a book? Y/N"
-    
+   input = "" 
    input = gets.chomp 
-    if input == Y 
+    if input == "Y" 
       "Please type title you would like more info on."
          EricCarleBooks::Scraper.get_info(gets.chomp)
-    else input == N 
+    else input == "N" 
       "Have a nice day."
     end 
   end 

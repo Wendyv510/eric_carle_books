@@ -5,7 +5,8 @@ class EricCarleBooks::Scraper
     books = []
     doc = Nokogiri::HTML(open("http://www.eric-carle.com/ECbooks.html"))
     title = doc.css("span.booktitle")
-    books << EricCarleBooks::Books.new(title) 
+    books << EricCarleBooks::Books.new
+    books 
      
   end 
 
