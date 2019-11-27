@@ -4,7 +4,7 @@ class EricCarleBooks::Books
   
   @@all = [] 
   
-  def initialize(title)
+  def initialize
     @title = title 
     @@all << self 
   end 
@@ -15,10 +15,10 @@ class EricCarleBooks::Books
   
   def greeting
     puts "Hello, are you looking for the books Eric Carle has written? Y/N"
-
+  input = "" 
   input = gets.chomp 
-      if input == Y 
-        Scraper.get_books 
+      if input == "Y"
+        EricCarleBooks::Scraper.get_books 
       else 
         puts "Sorry, we can't help you."
       end 
@@ -30,7 +30,7 @@ class EricCarleBooks::Books
    input = gets.chomp 
     if input == Y 
       "Please type title you would like more info on."
-         Scraper.get_info(gets.chomp)
+         EricCarleBooks::Scraper.get_info(gets.chomp)
     else input == N 
       "Have a nice day."
     end 

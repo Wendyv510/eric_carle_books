@@ -1,4 +1,4 @@
-require "pry"
+#require "pry"
 require "nokogiri" 
 require_relative "eric_carle_books/version"
 require_relative "eric_carle_books/books"

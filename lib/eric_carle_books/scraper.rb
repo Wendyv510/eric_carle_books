@@ -3,6 +3,7 @@ class EricCarleBooks::Scraper
   
   def self.get_page 
     doc = Nokogiri::HTML(open("http://www.eric-carle.com/ECbooks.html"))
+    
   end 
   
   def self.get_books 
