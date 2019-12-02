@@ -5,11 +5,17 @@ def greeting
   input = "" 
   input = gets.chomp 
       if input == "Y"
-        puts EricCarleBooks::Scraper.get_books 
-             info_prompt 
+        puts EricCarleBooks::Scraper.new.get_books 
+             list_books 
       else 
         puts "Sorry, we can't help you."
       end 
+  end
+  
+  def list_books 
+    EricCarleBooks::Books.new.each_with_index do |book,i|
+      puts "#{i+1} #{book.title}" 
+    end 
   end 
   
   def info_prompt  
