@@ -4,6 +4,12 @@ class EricCarleBooks::Books
   
   @@all = [] 
   
+  def initialize 
+    @title = title 
+    @year_published = year_published 
+    @description = description 
+  end 
+  
   def self.all 
     @@all 
   end 

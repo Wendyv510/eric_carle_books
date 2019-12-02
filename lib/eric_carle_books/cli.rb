@@ -13,7 +13,7 @@ class EricCarleBooks::CLI
   end
   
   def list_books 
-    EricCarleBooks::Books.new.each_with_index do |book,i|
+    EricCarleBooks::Books.all.each_with_index do |book,i|
       puts "#{i+1} #{book.title}" 
     end 
   end 
