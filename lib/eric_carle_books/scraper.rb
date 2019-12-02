@@ -1,6 +1,5 @@
 class EricCarleBooks::Scraper 
   
-  attr_accessor :doc, :book_list 
   
   def book_list 
     @book_list = book_list 

@@ -3,4 +3,4 @@
 require_relative "../lib/eric_carle_books.rb" 
 
 
-EricCarleBooks::Books.new.greeting
+EricCarleBooks::CLI.new.greeting
