@@ -24,7 +24,10 @@ def greeting
    input = gets.chomp 
     if input == "Y" 
       "Please type title you would like more info on."
-         EricCarleBooks::Scraper.get_info(gets.chomp)
+        if input.to_i-1<=EricCarleBooks::Books.all.size 
+          book = EricCarleBooks::Books.all[input.to_i-1]
+            puts Books.year_published 
+            puts Books.description 
     else input == "N" 
       "Have a nice day."
     end 
