@@ -1,11 +1,14 @@
 class EricCarleBooks::Scraper 
   
-  def self.get_books 
+  attr_accessor :doc, :book_list 
+  
+  def self.get_books
+    @book_list = book_list 
     book_list = []
+    @doc = doc 
     doc = Nokogiri::HTML(open("http://www.eric-carle.com/ECbooks.html"))
     title = doc.css("span.booktitle")
-    book_list << EricCarleBooks::Books.new
-    book_list  
+    book_list  << title 
      
   end 
 

@@ -18,7 +18,8 @@ class EricCarleBooks::Books
   input = "" 
   input = gets.chomp 
       if input == "Y"
-        puts EricCarleBooks::Scraper.get_books 
+        puts get_books 
+             info_prompt 
       else 
         puts "Sorry, we can't help you."
       end 
