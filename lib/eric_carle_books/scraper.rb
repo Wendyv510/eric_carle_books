@@ -1,12 +1,17 @@
 class EricCarleBooks::Scraper 
 
   
-  def get_books
+  def self.get_books
     @doc = Nokogiri::HTML(open("http://www.eric-carle.com/ECbooks.html"))
-    book = EricCarleBooks::Books.new 
-    book.title = @doc.css("span.booktitle").text 
-    book.year_published = @doc.css("span").text[0]
-    #book.description = @doc.css ("span").text [1] 
+    
+    title = @doc.css("span.booktitle").text 
+    year_published = @doc.css("span").text[0]
+    #book.description = @doc.css ("span").text [1]
+    titles = @doc.css("span.booktitle")
+       titles.each do |title|
+          binding.pry
+       end 
+    book = EricCarleBooks::Books.new(title,year_published)
   end 
       
 end 

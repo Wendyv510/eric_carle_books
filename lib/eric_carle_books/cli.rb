@@ -2,16 +2,16 @@ class EricCarleBooks::CLI
 
   def greeting
     puts "Hello, are you looking for the books Eric Carle has written? Y/N"
-  input = "" 
+   
   input = gets.chomp 
       if input == "Y"
-        puts EricCarleBooks::Scraper.new.get_books 
+         EricCarleBooks::Scraper.get_books 
              list_books 
       else 
         puts "Sorry, we can't help you."
       end 
   end
-  
+
   def list_books 
     EricCarleBooks::Books.all.each_with_index do |book,i|
       puts "#{i+1} #{book.title}" 
