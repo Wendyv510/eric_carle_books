@@ -7,6 +7,7 @@ class EricCarleBooks::CLI
       if input == "Y"
          EricCarleBooks::Scraper.get_books 
              list_books 
+             info_prompt
       else 
         puts "Sorry, we can't help you."
       end 
@@ -19,18 +20,15 @@ class EricCarleBooks::CLI
   end 
   
   def info_prompt  
-    puts "Would you like more info on a book? Y/N"
+    puts "Please select what number of the book you would you like more info on or exit."
    input = "" 
    input = gets.chomp 
-    if input == "Y" 
-      "Please type title you would like more info on."
-        if input.to_i-1<=EricCarleBooks::Books.all.size 
+    if input.to_i-1<=EricCarleBooks::Books.all.size 
           book = EricCarleBooks::Books.all[input.to_i-1]
             puts book.year_published 
             puts book.description 
-    else input == "N" 
+    else input == "exit" 
       "Have a nice day."
-        end
     end 
   end 
 

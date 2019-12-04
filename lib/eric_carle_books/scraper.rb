@@ -17,10 +17,10 @@ class EricCarleBooks::Scraper
   def self.get_books 
     @doc = Nokogiri::HTML(open("https://www.teachervision.com/authors/top-10-books-eric-carle"))
     
-    title = @doc.css("div.collection-title").text 
-   
+    title = @doc.css("div.collection-title").text
+    description = @doc.css("div.collection-body").text 
     
     book = EricCarleBooks::Books.new(title)
-    binding.pry
+
   end 
 end 
