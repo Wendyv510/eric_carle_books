@@ -4,9 +4,9 @@ class EricCarleBooks::Books
   
   @@all = [] 
   
-  def initialize(title,year_published) 
+  def initialize(title) 
     @title = title 
-    @year_published = year_published 
+    #@year_published = year_published 
     #@description = description 
     self.save
   end 
