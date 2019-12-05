@@ -1,7 +1,7 @@
 class EricCarleBooks::CLI 
 
   def greeting
-    puts "Hello, are you looking for the books Eric Carle has written? Y/N"
+    puts "Welcome, are you looking for the top 10 books Eric Carle has written? Y/N"
    
   input = gets.chomp 
       if input == "Y"
@@ -26,7 +26,6 @@ class EricCarleBooks::CLI
    input = gets.chomp 
     if input.to_i-1<=EricCarleBooks::Books.all.size 
           book = EricCarleBooks::Books.all[input.to_i-1]
-            #puts book.year_published 
             puts book.description 
     else input == "exit" 
       "Have a nice day."
