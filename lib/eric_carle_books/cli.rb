@@ -30,6 +30,7 @@ class EricCarleBooks::CLI
             puts book.activity
     else input == "exit" 
       "Have a nice day."
+       exit 
        end 
     end 
   end 

@@ -4,7 +4,7 @@ class EricCarleBooks::Books
   
   @@all = [] 
   
-  def initialize(title,description) 
+  def initialize(title,description,activity) 
     @title = title 
     @description = description 
     @activity = activity 

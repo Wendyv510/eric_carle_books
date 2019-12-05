@@ -9,7 +9,7 @@ class EricCarleBooks::Scraper
       title=title.text
       description = @doc.css("div.collection-body")[index].text 
       activity = @doc.css("div.collection-body a").map {|anchor|anchor["href"]}
-       book = EricCarleBooks::Books.new(title,description)
+       book = EricCarleBooks::Books.new(title,description,activity)
     end 
   end 
 end 
