@@ -22,11 +22,12 @@ class EricCarleBooks::CLI
   def info_prompt  
       input = ""
       while input != "exit" 
-    puts "Please select what number of the book you would you like more info on or exit."
+    puts "Please select a number to recieve a book description and activity link or exit."
    input = gets.chomp 
     if input.to_i-1<=EricCarleBooks::Books.all.size 
           book = EricCarleBooks::Books.all[input.to_i-1]
             puts book.description 
+            puts book.activity
     else input == "exit" 
       "Have a nice day."
        end 

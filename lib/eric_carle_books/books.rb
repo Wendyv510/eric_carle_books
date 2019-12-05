@@ -1,13 +1,13 @@
 class EricCarleBooks::Books 
   
-  attr_accessor :title, :year_published, :description 
+  attr_accessor :title, :activity, :description 
   
   @@all = [] 
   
   def initialize(title,description) 
     @title = title 
-    #@year_published = year_published 
     @description = description 
+    @activity = activity 
     self.save
   end 
   
