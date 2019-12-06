@@ -28,9 +28,8 @@ class EricCarleBooks::CLI
           book = EricCarleBooks::Books.all[input.to_i-1]
             puts book.description 
             puts book.activity
-    else input == "exit" 
+    elsif input == "exit" 
       "Have a nice day."
-       exit 
        end 
     end 
   end 
