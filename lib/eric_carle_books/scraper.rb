@@ -8,7 +8,7 @@ class EricCarleBooks::Scraper
     titles.each_with_index do |title, index|
       title=title.text
       description = @doc.css("div.collection-body")[index].text 
-      activity = @doc.css("div.collection-body a").map {|anchor|anchor["href"]}
+      activity = @doc.css("div.collection-body a").each {|anchor|anchor["href"]}[index]
        book = EricCarleBooks::Books.new(title,description,activity)
     end 
   end 
