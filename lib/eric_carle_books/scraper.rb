@@ -8,8 +8,12 @@ class EricCarleBooks::Scraper
     titles.each_with_index do |title, index|
       title=title.text
       description = @doc.css("div.collection-body")[index].text 
-      link= @doc.css("div.collection-body a")[index].attributes["href"].value
+      if  @doc.css("div.collection-body a")[index] == nil 
+        activity = "Sorry, no link to this activity."
+      else 
+       link= @doc.css("div.collection-body a")[index].attributes["href"].value
       activity = root_url + link 
+     end 
       book = EricCarleBooks::Books.new(title,description,activity)
     end 
   end 
