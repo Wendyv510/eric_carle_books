@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Wendy Harris'"]
   spec.email         = ["'wendyv510@hotmail.com'"]
 
-  spec.summary       = "User can find full list of Eric Carle books. Also, can then view description, and year published of one of those books if they'd like."
+  spec.summary       = "User can find list of Eric Carle top 10 books. They can then choose to  view description, and an activity with link to go with a book."
   spec.homepage      = "https://github.com/Wendyv510/eric_carle_books.git"
   spec.license       = "MIT"
 
