@@ -24,13 +24,13 @@ class EricCarleBooks::CLI
       while input != "exit" 
     puts "Please select a number to recieve a book description and activity link or exit."
    input = gets.chomp 
-    if input.to_i-1<=EricCarleBooks::Books.all.size 
+    if input == "exit" 
+      "Have a nice day."
+    elsif  input.to_i-1<=EricCarleBooks::Books.all.size 
           book = EricCarleBooks::Books.all[input.to_i-1]
             puts book.description 
             puts book.activity
-    elsif input == "exit" 
-      "Have a nice day."
-       end 
+      end 
     end 
   end 
 
