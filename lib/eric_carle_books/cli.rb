@@ -28,6 +28,7 @@ class EricCarleBooks::CLI
       "Have a nice day."
     elsif  input.to_i-1<=EricCarleBooks::Books.all.size 
           book = EricCarleBooks::Books.all[input.to_i-1]
+            puts book.title
             puts book.description 
             puts book.activity
       end 
